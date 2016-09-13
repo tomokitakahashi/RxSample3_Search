@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		49AAA1FDA8D95EAA3D88CCB6 /* Pods_RxSample3_SearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740A74D81AA7A857BBB1613D /* Pods_RxSample3_SearchUITests.framework */; };
 		55241D481D87A26300017C68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D471D87A26300017C68 /* AppDelegate.swift */; };
-		55241D4A1D87A26300017C68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D491D87A26300017C68 /* ViewController.swift */; };
-		55241D4D1D87A26300017C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55241D4B1D87A26300017C68 /* Main.storyboard */; };
+		55241D4A1D87A26300017C68 /* RoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D491D87A26300017C68 /* RoginViewController.swift */; };
+		55241D4D1D87A26300017C68 /* Rogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55241D4B1D87A26300017C68 /* Rogin.storyboard */; };
 		55241D501D87A26300017C68 /* RxSample3_Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55241D4E1D87A26300017C68 /* RxSample3_Search.xcdatamodeld */; };
 		55241D521D87A26300017C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55241D511D87A26300017C68 /* Assets.xcassets */; };
 		55241D551D87A26300017C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55241D531D87A26300017C68 /* LaunchScreen.storyboard */; };
 		55241D601D87A26400017C68 /* RxSample3_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D5F1D87A26400017C68 /* RxSample3_SearchTests.swift */; };
 		55241D6B1D87A26400017C68 /* RxSample3_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D6A1D87A26400017C68 /* RxSample3_SearchUITests.swift */; };
+		55241D7D1D87A8B500017C68 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55241D7C1D87A8B500017C68 /* MainViewController.swift */; };
+		55241D7F1D87A8C800017C68 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55241D7E1D87A8C800017C68 /* MainView.storyboard */; };
+		55241D871D87AB0E00017C68 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55241D861D87AB0E00017C68 /* Alamofire.framework */; };
+		55241D891D87AB1100017C68 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55241D881D87AB1100017C68 /* ObjectMapper.framework */; };
+		55241D8C1D87AB1800017C68 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55241D8A1D87AB1800017C68 /* RxCocoa.framework */; };
+		55241D8D1D87AB1800017C68 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55241D8B1D87AB1800017C68 /* RxSwift.framework */; };
 		5B15BDE10961E53842006FE8 /* Pods_RxSample3_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C3F0875B3BA2B227F12B676 /* Pods_RxSample3_Search.framework */; };
 		E84419FCC1F8419C5742A097 /* Pods_RxSample3_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE1A17685ED0F80C4E36372 /* Pods_RxSample3_SearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -44,8 +50,8 @@
 		4C3F0875B3BA2B227F12B676 /* Pods_RxSample3_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample3_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55241D441D87A26300017C68 /* RxSample3_Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSample3_Search.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55241D471D87A26300017C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55241D491D87A26300017C68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		55241D4C1D87A26300017C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55241D491D87A26300017C68 /* RoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoginViewController.swift; sourceTree = "<group>"; };
+		55241D4C1D87A26300017C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Rogin.storyboard; sourceTree = "<group>"; };
 		55241D4F1D87A26300017C68 /* RxSample3_Search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RxSample3_Search.xcdatamodel; sourceTree = "<group>"; };
 		55241D511D87A26300017C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55241D541D87A26300017C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +62,12 @@
 		55241D661D87A26400017C68 /* RxSample3_SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSample3_SearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55241D6A1D87A26400017C68 /* RxSample3_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSample3_SearchUITests.swift; sourceTree = "<group>"; };
 		55241D6C1D87A26400017C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55241D7C1D87A8B500017C68 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		55241D7E1D87A8C800017C68 /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		55241D861D87AB0E00017C68 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSample3_Search-apdqgtcezxmvbgexflpagcnzqtpv/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		55241D881D87AB1100017C68 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSample3_Search-apdqgtcezxmvbgexflpagcnzqtpv/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		55241D8A1D87AB1800017C68 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSample3_Search-apdqgtcezxmvbgexflpagcnzqtpv/Build/Products/Debug-iphonesimulator/RxCocoa/RxCocoa.framework"; sourceTree = "<group>"; };
+		55241D8B1D87AB1800017C68 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/RxSample3_Search-apdqgtcezxmvbgexflpagcnzqtpv/Build/Products/Debug-iphonesimulator/RxSwift/RxSwift.framework"; sourceTree = "<group>"; };
 		5AA6796DF0D1A296E2C0F18C /* Pods-RxSample3_Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample3_Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample3_Search/Pods-RxSample3_Search.release.xcconfig"; sourceTree = "<group>"; };
 		740A74D81AA7A857BBB1613D /* Pods_RxSample3_SearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSample3_SearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A285E011ED9A8FE3EE3A9FA3 /* Pods-RxSample3_SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSample3_SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSample3_SearchUITests/Pods-RxSample3_SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +80,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55241D8C1D87AB1800017C68 /* RxCocoa.framework in Frameworks */,
+				55241D8D1D87AB1800017C68 /* RxSwift.framework in Frameworks */,
+				55241D891D87AB1100017C68 /* ObjectMapper.framework in Frameworks */,
+				55241D871D87AB0E00017C68 /* Alamofire.framework in Frameworks */,
 				5B15BDE10961E53842006FE8 /* Pods_RxSample3_Search.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,8 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				55241D471D87A26300017C68 /* AppDelegate.swift */,
-				55241D491D87A26300017C68 /* ViewController.swift */,
-				55241D4B1D87A26300017C68 /* Main.storyboard */,
+				55241D7B1D87A7BD00017C68 /* ViewModel */,
+				55241D7A1D87A7B500017C68 /* Model */,
+				55241D791D87A7AB00017C68 /* ViewConrtroller */,
 				55241D511D87A26300017C68 /* Assets.xcassets */,
 				55241D531D87A26300017C68 /* LaunchScreen.storyboard */,
 				55241D561D87A26300017C68 /* Info.plist */,
@@ -145,9 +162,38 @@
 			path = RxSample3_SearchUITests;
 			sourceTree = "<group>";
 		};
+		55241D791D87A7AB00017C68 /* ViewConrtroller */ = {
+			isa = PBXGroup;
+			children = (
+				55241D491D87A26300017C68 /* RoginViewController.swift */,
+				55241D7C1D87A8B500017C68 /* MainViewController.swift */,
+				55241D7E1D87A8C800017C68 /* MainView.storyboard */,
+				55241D4B1D87A26300017C68 /* Rogin.storyboard */,
+			);
+			name = ViewConrtroller;
+			sourceTree = "<group>";
+		};
+		55241D7A1D87A7B500017C68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55241D7B1D87A7BD00017C68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		A3C88ECEB6A2F55DB4D94D13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55241D8A1D87AB1800017C68 /* RxCocoa.framework */,
+				55241D8B1D87AB1800017C68 /* RxSwift.framework */,
+				55241D881D87AB1100017C68 /* ObjectMapper.framework */,
+				55241D861D87AB0E00017C68 /* Alamofire.framework */,
 				4C3F0875B3BA2B227F12B676 /* Pods_RxSample3_Search.framework */,
 				DFE1A17685ED0F80C4E36372 /* Pods_RxSample3_SearchTests.framework */,
 				740A74D81AA7A857BBB1613D /* Pods_RxSample3_SearchUITests.framework */,
@@ -284,7 +330,8 @@
 			files = (
 				55241D551D87A26300017C68 /* LaunchScreen.storyboard in Resources */,
 				55241D521D87A26300017C68 /* Assets.xcassets in Resources */,
-				55241D4D1D87A26300017C68 /* Main.storyboard in Resources */,
+				55241D7F1D87A8C800017C68 /* MainView.storyboard in Resources */,
+				55241D4D1D87A26300017C68 /* Rogin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,9 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55241D4A1D87A26300017C68 /* ViewController.swift in Sources */,
+				55241D4A1D87A26300017C68 /* RoginViewController.swift in Sources */,
 				55241D481D87A26300017C68 /* AppDelegate.swift in Sources */,
 				55241D501D87A26300017C68 /* RxSample3_Search.xcdatamodeld in Sources */,
+				55241D7D1D87A8B500017C68 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,12 +546,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		55241D4B1D87A26300017C68 /* Main.storyboard */ = {
+		55241D4B1D87A26300017C68 /* Rogin.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				55241D4C1D87A26300017C68 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Rogin.storyboard;
 			sourceTree = "<group>";
 		};
 		55241D531D87A26300017C68 /* LaunchScreen.storyboard */ = {

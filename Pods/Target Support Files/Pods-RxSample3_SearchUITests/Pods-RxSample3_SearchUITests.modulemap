@@ -1,0 +1,6 @@
+framework module Pods_RxSample3_SearchUITests {
+  umbrella header "Pods-RxSample3_SearchUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
