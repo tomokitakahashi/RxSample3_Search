@@ -18,22 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3q-RL-nJb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3q-RL-nJb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.023692751652475641" green="0.96846218947935747" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="IAC-Lb-Y4I"/>
+                                    <constraint firstAttribute="width" constant="73" id="5my-aT-QfJ"/>
+                                    <constraint firstAttribute="height" constant="69" id="MBq-FY-AM1"/>
                                 </constraints>
-                                <state key="normal" title="Rogin">
+                                <state key="normal" image="twitter-test">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="IAC-Lb-Y4I"/>
+                                        <exclude reference="5my-aT-QfJ"/>
+                                        <exclude reference="MBq-FY-AM1"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="IAC-Lb-Y4I"/>
+                                        <include reference="5my-aT-QfJ"/>
+                                        <include reference="MBq-FY-AM1"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -43,28 +48,42 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rogin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dix-cG-54J">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.078463552790127178" green="0.8767732736224686" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="a3q-RL-nJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWU-RI-rQw"/>
-                            <constraint firstItem="a3q-RL-nJb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="byi-h7-4pe"/>
+                            <constraint firstItem="a3q-RL-nJb" firstAttribute="top" secondItem="dix-cG-54J" secondAttribute="bottom" constant="25" id="6VT-n3-cB2"/>
+                            <constraint firstItem="a3q-RL-nJb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9tD-m4-PqW"/>
+                            <constraint firstItem="dix-cG-54J" firstAttribute="centerX" secondItem="a3q-RL-nJb" secondAttribute="centerX" id="Nbz-Sr-hMB"/>
+                            <constraint firstItem="a3q-RL-nJb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YVI-V0-42P"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="a3q-RL-nJb"/>
+                                <exclude reference="dix-cG-54J"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="QWU-RI-rQw"/>
-                                <exclude reference="byi-h7-4pe"/>
+                                <exclude reference="Nbz-Sr-hMB"/>
+                                <exclude reference="6VT-n3-cB2"/>
+                                <exclude reference="9tD-m4-PqW"/>
+                                <exclude reference="YVI-V0-42P"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="a3q-RL-nJb"/>
+                                <include reference="dix-cG-54J"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="QWU-RI-rQw"/>
-                                <include reference="byi-h7-4pe"/>
+                                <include reference="Nbz-Sr-hMB"/>
+                                <include reference="6VT-n3-cB2"/>
+                                <include reference="9tD-m4-PqW"/>
+                                <include reference="YVI-V0-42P"/>
                             </mask>
                         </variation>
                     </view>
@@ -87,6 +106,9 @@
             <point key="canvasLocation" x="1143.75" y="357"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="twitter-test" width="128" height="128"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uuM-mT-NfN"/>
     </inferredMetricsTieBreakers>
