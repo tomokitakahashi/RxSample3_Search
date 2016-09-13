@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--Rogin View Controller-->
@@ -36,7 +37,10 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="bUp-Ji-0Cm" kind="show" id="oEc-IJ-mqz"/>
+                                    <segue destination="bUp-Ji-0Cm" kind="presentation" modalTransitionStyle="crossDissolve" id="uuM-mT-NfN">
+                                        <segue key="commit" inheritsFrom="parent" id="aKo-AX-cI6"/>
+                                        <segue key="preview" inheritsFrom="commit" id="CEU-mb-VCl"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -75,10 +79,15 @@
         <!--MainView-->
         <scene sceneID="EMg-3X-lTp">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="MainView" id="bUp-Ji-0Cm" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="MainView" id="bUp-Ji-0Cm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5SA-MU-8Lk"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5X-pu-ISP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1143.75" y="357"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uuM-mT-NfN"/>
+    </inferredMetricsTieBreakers>
 </document>
