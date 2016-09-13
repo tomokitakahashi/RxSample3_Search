@@ -18,11 +18,11 @@ class Snippet: Base {
     private(set) var liveBroadcastContent : String?
     
     override func mapping(map: Map) {
-        pubishedAt <- map["publishredAt"]
+        pubishedAt <- (map["publishredAt"],DateTransform())
         channelId <- map["channelId"]
         title <- map["title"]
         description <- map["description"]
-        thumbnail <- map["thumnails"]["default"]["url"]
+        thumbnail <- (map["thumnails"]["default"]["url"],URLTransform())
         channelTitle <- map["channelTitle"]
         liveBroadcastContent <- map["liveBroadcastContent"]
     }

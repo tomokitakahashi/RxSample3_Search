@@ -9,6 +9,7 @@
 import Alamofire
 import RxSwift
 import RxCocoa
+import ObjectMapper
 
 enum ApiMethod : String{
     case GET = "GET"
@@ -42,7 +43,6 @@ class Api {
         let url = NSURL(string: router.baseUrl + path)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = method.rawValue
-        request.addValue("", forHTTPHeaderField: "")
         return encording.encode(request, parameters: parameters).0
     }
     
@@ -61,10 +61,31 @@ class Api {
         return self
     }
     
-    
-    
-    
-    
-    
-    
 }
+extension Api {
+    func request(){
+        print(parameters)
+        print(requestUrl)
+        Alamofire.request(requestUrl)
+                .validate()
+            .responseJSON(completionHandler: { response in
+
+
+                switch response.result {
+                case .Success(let value) :
+                    print(value)
+                    guard let object = Mapper<Items>().map(value) else {
+                        return print("error")
+                    }
+                    
+
+                    
+                case .Failure(let error) :
+                    print("error code : \(error)")
+                }
+                
+            })
+    }
+}
+
+

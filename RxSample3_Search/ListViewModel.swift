@@ -11,6 +11,9 @@ import RxSwift
 
 
 class ListViewModel: NSObject {
+    func SearchData(searchStr : String){
+        Api.SearchRouter.getSearch(searchStr)
+    }
     
 }
 

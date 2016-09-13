@@ -10,12 +10,14 @@ import UIKit
 import ObjectMapper
 
 class Item : Base {
-    private(set) var id : [Id]?
-    private(set) var snippet : [Snippet]?
+    private(set) var ids : Id?
+    private(set) var snippet : Snippet?
+    private(set) var etag : String?
     
     override func mapping(map: Map) {
-        id <- map["id"]
+        ids <- map["id"]
         snippet <- map["snippet"]
+        etag <- map["etag"]
     }
 }
 

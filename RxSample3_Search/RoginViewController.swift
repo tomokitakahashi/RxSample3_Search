@@ -15,10 +15,14 @@ class RoginViewController: UIViewController {
 
     private var searchBar : UISearchBar!
     
+    let viewModel = ListViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configSearchBar()
-       
+        
+        
+       viewModel.SearchData("長友")
     }
 
     override func didReceiveMemoryWarning() {
