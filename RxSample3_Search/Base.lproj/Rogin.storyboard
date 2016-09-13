@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="457.5" y="357"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--MainView-->
         <scene sceneID="EMg-3X-lTp">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainView" id="bUp-Ji-0Cm" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="MainView" id="bUp-Ji-0Cm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5X-pu-ISP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1143.75" y="357"/>

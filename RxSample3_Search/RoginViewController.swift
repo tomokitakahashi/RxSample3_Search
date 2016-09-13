@@ -6,7 +6,10 @@
 //  Copyright © 2016年 takahashi tomoki. All rights reserved.
 //
 
+
 import UIKit
+import TwitterKit
+
 
 class RoginViewController: UIViewController {
 
@@ -14,6 +17,7 @@ class RoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        twitterRoginSet()
        
     }
 
@@ -21,7 +25,21 @@ class RoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
        
     }
+    
 
+}
 
+// MARK: - Private Function
+private extension RoginViewController {
+    func twitterRoginSet(){
+        print("Rogin Set")
+        roginButton = TWTRLogInButton(logInCompletion: { session , error in
+            guard let complete = session else {
+                return print(error?.localizedDescription)
+            }
+            print(complete.userName)
+        })
+    }
+    
 }
 
