@@ -70,15 +70,13 @@ extension Api {
                 .validate()
             .responseJSON(completionHandler: { response in
 
-
                 switch response.result {
                 case .Success(let value) :
                     print(value)
                     guard let object = Mapper<Items>().map(value) else {
                         return print("error")
+                        
                     }
-                    
-
                     
                 case .Failure(let error) :
                     print("error code : \(error)")
