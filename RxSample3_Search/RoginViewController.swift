@@ -10,14 +10,14 @@
 import UIKit
 import TwitterKit
 
-
+/**https://www.googleapis.com/youtube/v3/search?key=AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8&q=%E9%95%B7&part=snippet&maxResults=30&order=viewCount***/
 class RoginViewController: UIViewController {
 
-    @IBOutlet weak var roginButton: UIButton!
+    private var searchBar : UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        twitterRoginSet()
+        configSearchBar()
        
     }
 
@@ -31,18 +31,29 @@ class RoginViewController: UIViewController {
 
 // MARK: - Private Function
 private extension RoginViewController {
-    func twitterRoginSet(){
-        print("Rogin Set")
-        roginButton = TWTRLogInButton(logInCompletion: { session , error in
-            guard let complete = session else {
-                print("error !!")
-                return print(error?.localizedDescription)
+    
+    func configSearchBar(){
+        searchBar = UISearchBar()
+        searchBar.placeholder = "キーワード検索"
+        searchBar.showsCancelButton = true
+
+        searchBar.delegate = self
+        for subView in searchBar.subviews {
+            for secondSubView in subView.subviews {
+                if secondSubView.isKindOfClass(UITextField) {
+                    secondSubView.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.3)
+                }
             }
-            
-            print("complete")
-            print(complete.userName)
-        })
+        }
+        self.navigationItem.titleView = searchBar
+    }
+
+}
+
+// MARK: - UISearchBarDelegate 
+extension RoginViewController : UISearchBarDelegate{
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }
-
