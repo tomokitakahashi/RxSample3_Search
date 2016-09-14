@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  ListModel.swift
 //  RxSample3_Search
 //
 //  Created by takahashi tomoki on 2016/09/13.
@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
+import ObjectMapper
 
-
-class MainViewController : UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+class Base : Mappable {
+    required init?(_ map: Map) {
         
     }
-    
-    
+    func mapping(map: Map) {
+        
+    }
 }
+
