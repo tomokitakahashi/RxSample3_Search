@@ -8,6 +8,8 @@
 
 import RxSwift
 import RxCocoa
+
+
 /**https://www.googleapis.com/youtube/v3/search?key=AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8&q=%E9%95%B7&part=snippet&maxResults=30&order=viewCount***/
 
 extension Api {
@@ -19,7 +21,16 @@ extension Api {
             return Environment.sharedInstance.baseUrl
         }
         
-        static func getSearch(searchStr : String){
+        
+        /***
+         call api request & return Observable<[Items]>
+         
+         Items is dataModel from google Api youtube
+         ***/
+        
+        func getSearch(searchStr : String) -> Observable<Items> {
+
+
             let parameters = [
                 "key" : "AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8",
                 "q" : "\(searchStr)" ,
@@ -28,12 +39,9 @@ extension Api {
                 "order" : "viewCount"
             ]
             
-            
-            Api.createClient(.GET, router: Api.SearchRouter.init())
-                .settingParameters(parameters)
-                .request()
-                
-            
+            return Api.createClient(.GET, router: Api.SearchRouter.init())
+                    .settingParameters(parameters)
+                    .request()
         }
         
     }

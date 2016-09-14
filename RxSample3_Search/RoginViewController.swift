@@ -8,21 +8,28 @@
 
 
 import UIKit
+import RxCocoa
+import RxSwift
 import TwitterKit
 
 /**https://www.googleapis.com/youtube/v3/search?key=AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8&q=%E9%95%B7&part=snippet&maxResults=30&order=viewCount***/
 class RoginViewController: UIViewController {
 
     private var searchBar : UISearchBar!
+    @IBOutlet weak var resultTableView: UITableView!
     
-    let viewModel = ListViewModel()
+    private let vm : ListViewModel = ListViewModel()
+    let disposeBag = DisposeBag()
     
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configSearchBar()
         
-        
-       viewModel.SearchData("長友")
+        configureTableView()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +38,38 @@ class RoginViewController: UIViewController {
     }
     
 
+}
+// MARK: Configure Function 
+private extension RoginViewController {
+    func configureTableView() {
+        /***
+         '.flatMapLatest' = '.map({}).withLatestFrom({})'
+        ***/
+        
+        
+        let results = searchBar.rx_text
+            .asDriver()
+            .flatMapLatest({ query in
+                self.vm.SearchDataItem(query)
+                    .retry(3)
+                    .asDriver(onErrorJustReturn: [])
+                
+            })
+            .asDriver(onErrorJustReturn: [])
+        
+        
+        
+        // view binding (TableViewDataSourse)
+        results.drive(resultTableView.rx_itemsWithCellIdentifier("Cell")) { (_,result,cell) in
+            cell.textLabel?.text = result.snippet?.title
+        }
+        .addDisposableTo(disposeBag)
+        
+    }
+    func configureSearchBar() {
+        
+    
+    }
 }
 
 // MARK: - Private Function
@@ -58,6 +97,9 @@ private extension RoginViewController {
 extension RoginViewController : UISearchBarDelegate{
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        
     }
     
 }
