@@ -42,11 +42,15 @@ class RoginViewController: UIViewController {
 // MARK: Configure Function 
 private extension RoginViewController {
     func configureTableView() {
+        /***
+         '.flatMapLatest' = '.map({}).withLatestFrom({})'
+        ***/
+        
+        
         let results = searchBar.rx_text
             .asDriver()
             .flatMapLatest({ query in
-
-                 self.vm.SearchDataItem(query)
+                self.vm.SearchDataItem(query)
                     .retry(3)
                     .asDriver(onErrorJustReturn: [])
                 
