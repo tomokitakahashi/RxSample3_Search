@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class Id : Base {
+final class Id : Base {
     private(set) var kind : String?
     private(set) var videoId : String?
     

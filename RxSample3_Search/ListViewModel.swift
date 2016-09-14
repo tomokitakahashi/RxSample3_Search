@@ -8,9 +8,14 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 
 class ListViewModel: NSObject {
+    
+
+    private(set) var items : Driver<[Items]> = Driver.never()
+    
     func SearchData(searchStr : String){
         Api.SearchRouter.getSearch(searchStr)
     }

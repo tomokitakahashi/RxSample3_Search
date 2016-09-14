@@ -63,26 +63,37 @@ class Api {
     
 }
 extension Api {
-    func request(){
-        print(parameters)
-        print(requestUrl)
-        Alamofire.request(requestUrl)
+    func request() -> Observable<Items>{
+        
+        return Observable.create({ observar in
+            Alamofire.request(self.requestUrl)
                 .validate()
-            .responseJSON(completionHandler: { response in
-
-                switch response.result {
-                case .Success(let value) :
-                    print(value)
-                    guard let object = Mapper<Items>().map(value) else {
-                        return print("error")
+                .responseJSON(completionHandler: { response in
+                    
+                    switch response.result {
+                    case .Success(let value) :
+                        print(value)
+                        guard let object = Mapper<Items>().map(value) else {
+                            return observar.onCompleted()
+                        }
                         
+                        observar.onNext(object)
+                        observar.onCompleted()
+                        
+                    case .Failure(let error) :
+                        observar.onError(error)
+                        print("error code : \(error)")
                     }
                     
-                case .Failure(let error) :
-                    print("error code : \(error)")
-                }
+                })
+    
+            return AnonymousDisposable {
                 
-            })
+            }
+            
+        })
+        
+
     }
 }
 

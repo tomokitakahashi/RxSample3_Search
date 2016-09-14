@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-class Snippet: Base {
+final class Snippet: Base {
     private(set) var pubishedAt : NSDate?
     private(set) var channelId : String?
     private(set) var title : String?

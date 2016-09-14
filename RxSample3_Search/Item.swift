@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class Item : Base {
+final class Item : Base {
     private(set) var ids : Id?
     private(set) var snippet : Snippet?
     private(set) var etag : String?

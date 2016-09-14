@@ -9,7 +9,7 @@
 import ObjectMapper
 
 
-class Items: Base {
+final class Items: Base {
     private(set) var items : [Item]?
     
     override func mapping(map: Map) {
