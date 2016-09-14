@@ -63,7 +63,7 @@ class Api {
     
 }
 extension Api {
-    func request() -> Observable<Items>{
+    func request<E : Items>() -> Observable<E>{
         
         return Observable.create({ observar in
             Alamofire.request(self.requestUrl)
@@ -73,7 +73,7 @@ extension Api {
                     switch response.result {
                     case .Success(let value) :
                         print(value)
-                        guard let object = Mapper<Items>().map(value) else {
+                        guard let object = Mapper<E>().map(value) else {
                             return observar.onCompleted()
                         }
                         
