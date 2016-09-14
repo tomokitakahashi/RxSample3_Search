@@ -13,17 +13,17 @@ import RxCocoa
 
 class ListViewModel: NSObject {
     
+    static var sharedInstance = ListViewModel()
+    
+    
     final private let searchRouter = Api.SearchRouter()
     
     private(set) var items : Driver<[Item]> = Driver.never()
 
     let disposeBag = DisposeBag()
     
-    func SearchData(searchStr : String) {
-       self.items = configItem(searchStr).asDriver(onErrorJustReturn: [])
-    }
+    func SearchDataItem(searchStr : String) -> Observable<[Item]>{
     
-    func configItem(searchStr : String) -> Observable<[Item]>{
         return searchRouter.getSearch(searchStr)
                 .observeOn(SerialDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
                 .retry(3)
@@ -33,6 +33,7 @@ class ListViewModel: NSObject {
                     }
                     return item
                 })
+        
     }
     
     
