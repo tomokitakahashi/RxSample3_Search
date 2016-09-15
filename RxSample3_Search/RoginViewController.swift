@@ -18,11 +18,9 @@ class RoginViewController: UIViewController {
     private var searchBar : UISearchBar!
     @IBOutlet weak var resultTableView: UITableView!
     
-    private let vm : ListViewModel = ListViewModel()
     let disposeBag = DisposeBag()
     
     
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,11 +44,10 @@ private extension RoginViewController {
          '.flatMapLatest' = '.map({}).withLatestFrom({})'
         ***/
         
-        
         let results = searchBar.rx_text
             .asDriver()
             .flatMapLatest({ query in
-                self.vm.SearchDataItem(query)
+                ListViewModel.sharedInstance.SearchDataItem(query)
                     .retry(3)
                     .asDriver(onErrorJustReturn: [])
                 
@@ -65,10 +62,6 @@ private extension RoginViewController {
         }
         .addDisposableTo(disposeBag)
         
-    }
-    func configureSearchBar() {
-        
-    
     }
 }
 
