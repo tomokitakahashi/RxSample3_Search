@@ -66,9 +66,11 @@ extension Api {
     func request<E : Items>() -> Observable<E>{
         
         return Observable.create({ observar in
+            
+            //Alamofire.request(.GET , URL , parameters)
             Alamofire.request(self.requestUrl)
-                .validate()
-                .responseJSON(completionHandler: { response in
+                    .validate()
+                    .responseJSON(completionHandler: { response in
                     
                     switch response.result {
                     case .Success(let value) :

@@ -21,7 +21,6 @@ extension Api {
             return Environment.sharedInstance.baseUrl
         }
         
-        
         /***
          call api request & return Observable<[Items]>
          
@@ -29,8 +28,6 @@ extension Api {
          ***/
         
         func getSearch(searchStr : String) -> Observable<Items> {
-
-
             let parameters = [
                 "key" : "AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8",
                 "q" : "\(searchStr)" ,

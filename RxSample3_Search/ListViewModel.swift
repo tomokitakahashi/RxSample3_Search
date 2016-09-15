@@ -15,12 +15,9 @@ class ListViewModel: NSObject {
     
     static var sharedInstance = ListViewModel()
     
-    
-    final private let searchRouter = Api.SearchRouter()
+    private let searchRouter = Api.SearchRouter()
     
     private(set) var items : Driver<[Item]> = Driver.never()
-
-    let disposeBag = DisposeBag()
     
     func SearchDataItem(searchStr : String) -> Observable<[Item]>{
     
