@@ -62,6 +62,19 @@ private extension RoginViewController {
         }
         .addDisposableTo(disposeBag)
         
+        
+        resultTableView
+            .rx_itemSelected
+            .subscribeNext({ indexPath in
+                let cell = self.resultTableView.cellForRowAtIndexPath(indexPath)!
+                let text = cell.textLabel!.text
+                print(text!)
+            })
+            .addDisposableTo(disposeBag)
+        
+        
+        
+        
     }
 }
 
