@@ -28,13 +28,14 @@ extension Api {
          ***/
         
         func getSearch(searchStr : String) -> Observable<Items> {
-            let parameters = [
-                "key" : "AIzaSyB_gsGxnsSjO_6rlJOeZX2LDZ3hosNY6m8",
-                "q" : "\(searchStr)" ,
-                "part" : "snippet",
-                "maxResults" : "30",
-                "order" : "viewCount"
-            ]
+            /**
+             Caution  !!
+              
+             Need set YoutubeApi Parameters here
+             
+             
+             **/
+            
             
             return Api.createClient(.GET, router: Api.SearchRouter.init())
                     .settingParameters(parameters)
